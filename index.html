@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <style>
+        body {
+            background-color: #183048;
+        }
+        #canvas {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 800px;
+            border: 1px solid#307878;
+        }
+        .play-again {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            padding: 2rem;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.03);
+            border: none;
+            border-radius: 3px;
+            background-color: transparent;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+            border: 1px solid #307878;
+        }
+        .screen-shake {
+            animation: shake 0.5s; 
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+       }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="675">
+        Your browser does not support the canvas element
+    </canvas>
+    <button class="play-again">Play Again</button>
+    <script src="bundle.js"></script>
+</body>
+</html>
